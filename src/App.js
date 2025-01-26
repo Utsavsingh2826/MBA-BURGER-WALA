@@ -11,6 +11,12 @@ import PaymentSuccess from './components/Cart/PaymentSuccess.jsx'
 import Login from './components/login/Login.jsx'
 import Profile from "./components/Profile/Profile.jsx"
 import MyOrders from './components/myOrders/MyOrders.jsx'
+import OrderDetails from './components/myOrders/OrderDetails.jsx'
+import Dashboard  from './components/admin/Dashboard.jsx'
+import Orders from './components/admin/Orders.jsx'
+import Users from './components/admin/Users.jsx'
+import About from './components/about/About.jsx'
+
 import './styles/app.scss'
 import './styles/header.scss'
 import './styles/home.scss'
@@ -25,6 +31,9 @@ import './styles/paymentsuccess.scss'
 import './styles/login.scss'
 import './styles/profile.scss'
 import './styles/table.scss'
+import './styles/orderdetails.scss'
+import './styles/dashboard.scss'
+import './styles/about.scss'
 const App = () => {
   return <Router>
    <Header/>
@@ -38,6 +47,12 @@ const App = () => {
     <Route path ="/Login" element ={<Login/>}/>
     <Route path ="/me" element ={<Profile/>}/>
     <Route path ="/myorders" element ={<MyOrders/>}/>
+    <Route path ="/order/:id" element ={<OrderDetails/>}/>
+    <Route path ="/admin/dashboard" element ={<Dashboard/>}/>
+    <Route path="/admin/users" element={<Users />} />
+    <Route path="/admin/orders" element={<Orders />} />
+    {/* <Route path="*" element={<NotFound />} /> */}
+    <Route path ="/about" element ={<About/>}/>
      </Routes>
    <Footer/>
   </Router>
